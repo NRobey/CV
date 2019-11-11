@@ -1,0 +1,114 @@
+---
+name: Nathan
+surname: Robey, M.S., ATC, CES
+position: "Lab Coordinator"
+address: "Health and Human Development, Western Washington University"
+phone: 360-650-4103
+email: "nathan.robey@wwu.edu"
+twitter: NathanJRobey
+github: NRobey
+linkedin: www.linkedin.com/in/nathan-robey
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tidyverse)
+library(lubridate)
+library(here)
+library(readxl)
+library(glue)
+```
+# Education
+```{r}
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
+  "South Dakota State University", "B.S. in Athletic Training", "Brookings, South Dakota", "Aug. 2007 - May. 2011", "GPA of 3.33",
+ "Texas State University",  "M.S. in Athletic Training", "San Marcos, Texas", "Aug. 2012 - May. 2014", "GPA of 3.88",
+    "Texas State University", "M.S. in Athletic Training", "San Marcos, Texas", "Aug. 2012 - May. 2014", "Thesis: The Influence of Fatigue on the Field-Based Assessment of Jump Landing Mechanics following Participation in Traditional versus Plyometric Hip Muscle Strengthening Programs.",
+  "University of Northern Colorado", "Ph.D. in Biomechanics", "Greeley, Colorado", "Aug. 2016 - May. 2020", "GPA of 4.0",
+   "University of Northern Colorado", "Ph.D. in Biomechanics", "Greeley, Colorado", "Aug. 2016 - May. 2020", "Minor in Applied Statistics and Research Methods",
+  "University of Northern Colorado", "Ph.D. in Biomechanics",  "Greeley, Colorado", "Aug. 2016 - May. 2020", "Dissertation: Visual Disruption During Dynamic Stability Tasks After Anterior Cruciate Ligament Reconstruction" ,
+) %>% 
+  detailed_entries(degree, dates, uni, loc, details)
+```
+
+# Professional Experience
+```{r}
+tribble(
+  ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  "Western Washington University", "Lab Coordinator", "Bellingham, Washington", "Jun. 2019 - Present", "Coordinatored Lab activities",
+  "University of Northern Colorado", "Graduate Teaching Assistant", "Greeley, Colorado", "Aug. 2016 - May. 2019","Provided instruction for undergraduate laboratory courses.", 
+  "University of Northern Colorado", "Graduate Teaching Assistant", "Greeley, Colorado", "Aug. 2016 - May. 2019", "Created course syllabi, developed course presentations, handouts, and quizzes.",
+   "University of Northern Colorado","Graduate Research Assistant",  "Greeley, Colorado", "Aug. 2016 - May. 2019","Assist with faculty and student research in the University of Northern Colorado Biomechanics Lab.",
+   "University of Northern Colorado", "Graduate Research Assistant", "Greeley, Colorado", "Aug. 2016 - May. 2019","Mentor for graduate students in the Sport and Exercise Science program.",
+  "University of Northern Colorado", "Graduate Student Lecturer", "Greeley, Colorado", "Aug. 2018 - Dec. 2018", "Supervised practicum in college teaching.",
+  "University of Northern Colorado", "Graduate Student Lecturer", "Greeley, Colorado", "Aug. 2018 - Dec. 2018", "Assisted with the development of course presentations and course grading.",
+  "Bethel University", "Lecturer", "St. Paul, Minnesota", "Jan. 2015 - May. 2016", "Instructed two laboratory classes per semester for CAATE accredited Athletic Training and Pre-Physical Therapy programs." ,
+   "Bethel University", "Lecturer", "St. Paul, Minnesota", "Jan. 2015 - May. 2016","Responsible for creation of course syllabi, class presentations, lab and homework assignments, creating tests and quizzes, and class adherence to CAATE standards.",
+  "Bethel University", "Assistant Athletic Trainer", "St. Paul, Minnesota", "Jan. 2015 - May. 2016","Charged with providing medical services to Men’s Hockey and Track and Field teams.", 
+   "Bethel University", "Assistant Athletic Trainer", "St. Paul, Minnesota", "Jan. 2015 - May. 2016","Services included injury assessment, developing rehabilitation and corrective exercise programs, and coordinating injury prevention programs.", 
+   "Bethel University", "Assistant Athletic Trainer", "St. Paul, Minnesota", "Jan. 2015 - May. 2016", "Served as a preceptor for Athletic Training students.",
+   "Cornerstone Christian Schools", "Head Athletic Trainer", "San Antonio, Texas", "Aug. 2014 - Dec. 2014", "Coordinated middle and high school athletic event coverage and therapeutic rehabilitation protocols.",
+  "Cornerstone Christian Schools", "Head Athletic Trainer", "San Antonio, Texas", "Aug. 2014 - Dec. 2014", "Implemented injury prevention programs and manual therapy techniques focusing on muscle energy.", 
+  "Cornerstone Christian Schools", "Head Athletic Trainer", "San Antonio, Texas", "Aug. 2014 - Dec. 2014","Mentor and supervisor for a graduate Athletic Training student.",
+  "Physical Therapy Consultants, Inc.", "Athletic Trainer", "Bethel, Minnesota", "May. 2014 - Aug. 2014", "Implemented appropriate therapeutic rehabilitation services for multiple Physical Therapy facilities and provided medical coverage for a local high school athletics program.",
+  "Texas State University", "Graduate Assistant Athletic Trainer", "San Marcos, Texas", "Aug. 2012 - May. 2014","Responsible for the design and implementation of rehabilitation protocols, performed injury and illness assessment, educated athletes on injury prevention.",
+  "Texas State University","Graduate Assistant Athletic Trainer", "San Marcos, Texas", "Aug. 2012 - May. 2014", "Served as a preceptor for 8-12 undergraduate Athletic Training students per semester.",
+   "Minnesota Aerials Gymnastics", "Head Athletic Trainer", "Anoka, Minnesota", "Jan. 2012 - Aug. 2012", "Provided injury assessment, created appropriate therapeutic rehabilitation programs and maintained proper injury documentation for the club gymnastics team.",
+  "Physical Therapy Consultants, Inc.", "Athletic Trainer", "Bethel, Minnesota", "Jul. 2011 - Aug. 2012", "Implemented appropriate therapeutic rehabilitation services for multiple Physical Therapy facilities and provided medical coverage for a local high school athletics program.",
+  "Mayo Clinic", "Research Assistant", "Rochester, Minnesota", "May. 2008 - May. 2009", "Monitored care for animals involved in research projects, cleaned and replaced animal cages and research equipment.",
+) %>% 
+  detailed_entries(role, dates, company, loc, details)
+```
+
+# Courses Taught
+```{r}
+tribble(
+~ role, ~ company, ~ loc, ~ dates, ~ details,
+ "University of Northern Colorado","Lecture", "","", "SES 220 Anatomical Kinesiology - Upper Extremity",
+ "University of Northern Colorado","Lecture", "","", "SES 331 Biomechanics - Internal Biomechanics",
+ "University of Northern Colorado","Lab", "","", "SES 220 Anatomical Kinesiology",
+ "University of Northern Colorado","Lab", "","", "SES 331 Biomechanics",
+) %>% 
+  detailed_entries(role, dates, company, loc, details)
+```
+
+# Research
+## Manuscripts
+
+## Refereed Presentations
+```{r}
+tribble(
+~ role, ~ company, ~ loc, ~ dates,
+ "Robey N.J., Boncella K.L., Heise G.D., Smith J.D., 
+Variables Associated with Loading Rate and Peak Vertical Ground Reaction Forces: A Hierarchical Regression Analysis.","9th Annual Regional Meeting of the Rocky Mountain American Society of Biomechanics","Poster","2018",
+
+) %>% 
+  detailed_entries(role, dates, company, loc)
+```
+
+# Professional Workshops and Symposia
+```{r}
+tribble(
+~ role, ~ company, ~ loc, ~ dates,
+ "","9th Annual Regional Meeting of the Rocky Mountain American Society of Biomechanics","Estes Park, CO","2018",
+ "","Understanding & Navigating Inclusion Through Education","Greeley, CO","2018",
+ "","Graduate Teaching Assistant Workshop","Greeley, CO","2018",
+ "","42nd Annual Meeting of the American Society of Biomechanics","Rochester, MN","2018",
+ "","8th Annual Regional Meeting of the Rocky Mountain American Society of Biomechanics","Estes Park, CO","2018",
+ "","Graduate Teaching Assistant Workshop","Greeley, CO","2017",
+ "","41st Annual Meeting of the American Society of Biomechanics","Boulder, CO","2017",
+ "","National Athletic Trainers’ Association 68th Clinical Symposia & AT Expo","Houston, TX","2017",
+ "","7th Annual Regional Meeting of the Rocky Mountain American Society of Biomechanics","Estes Park, CO","2017",
+ "","Graduate Teaching Assistant Workshop","Greeley, CO","2016",
+ "","Minnesota Athletic Trainers’ Association Annual Meeting & ClinicalSymposium","Plymouth, MN","2016",
+ "","National Athletic Trainers’ Association 66th Clinical Symposia & AT Expo","Houston, TX","2015",
+ "","Minnesota Athletic Trainers’ Association Annual Meeting & ClinicalSymposium","Plymouth, MN","2015",
+ "","Great Lakes Athletic Trainers’ Association Annual Meeting and Symposium,","Wheeling, IL","2015",
+) %>% 
+  detailed_entries(role, dates, company, loc)
+```
+
